@@ -14,5 +14,29 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $books=[
+        'Abook',
+        'Bbook',
+        '<script>alert("hello")</script>'
+    ];
+
+    return view('welcome',['books'=>$books]);
+});
+
+Route::get('/hello', function () {
+    $books=[
+        'Atestbook',
+        'Btestbook',
+        '<script>alert("hello")</script>'
+    ];
+    return view('hello')->with(['books' => $books]);
+});
+
+Route::get('/contact', function () {
+    $books=[
+        'Atest1book',
+        'Btest1book',
+        '<script>alert("hello")</script>'
+    ];
+    return view('contact')->withBooks($books);
 });
