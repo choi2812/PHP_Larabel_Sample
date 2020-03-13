@@ -8,10 +8,6 @@
     <title>@yield('title','페이지 제목 없음')</title>
 </head>
 <body>
-<div class="links">
-    <a href="/hello">hello</a>
-    <a href="/contact">contact</a>
-</div>
 @yield('content')
 </body>
 </html>
